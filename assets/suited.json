@@ -1,0 +1,213 @@
+{
+  "_cards": [
+    {
+      "value": 2,
+      "suit": "hearts"
+    },
+    {
+      "value": 3,
+      "suit": "hearts"
+    },
+    {
+      "value": 4,
+      "suit": "hearts"
+    },
+    {
+      "value": 5,
+      "suit": "hearts"
+    },
+    {
+      "value": 6,
+      "suit": "hearts"
+    },
+    {
+      "value": 7,
+      "suit": "hearts"
+    },
+    {
+      "value": 8,
+      "suit": "hearts"
+    },
+    {
+      "value": 9,
+      "suit": "hearts"
+    },
+    {
+      "value": 10,
+      "suit": "hearts"
+    },
+    {
+      "value": 11,
+      "suit": "hearts"
+    },
+    {
+      "value": 12,
+      "suit": "hearts"
+    },
+    {
+      "value": 13,
+      "suit": "hearts"
+    },
+    {
+      "value": 14,
+      "suit": "hearts"
+    },
+    {
+      "value": 2,
+      "suit": "diamond"
+    },
+    {
+      "value": 3,
+      "suit": "diamond"
+    },
+    {
+      "value": 4,
+      "suit": "diamond"
+    },
+    {
+      "value": 5,
+      "suit": "diamond"
+    },
+    {
+      "value": 6,
+      "suit": "diamond"
+    },
+    {
+      "value": 7,
+      "suit": "diamond"
+    },
+    {
+      "value": 8,
+      "suit": "diamond"
+    },
+    {
+      "value": 9,
+      "suit": "diamond"
+    },
+    {
+      "value": 10,
+      "suit": "diamond"
+    },
+    {
+      "value": 11,
+      "suit": "diamond"
+    },
+    {
+      "value": 12,
+      "suit": "diamond"
+    },
+    {
+      "value": 13,
+      "suit": "diamond"
+    },
+    {
+      "value": 14,
+      "suit": "diamond"
+    },
+    {
+      "value": 2,
+      "suit": "spade"
+    },
+    {
+      "value": 3,
+      "suit": "spade"
+    },
+    {
+      "value": 4,
+      "suit": "spade"
+    },
+    {
+      "value": 5,
+      "suit": "spade"
+    },
+    {
+      "value": 6,
+      "suit": "spade"
+    },
+    {
+      "value": 7,
+      "suit": "spade"
+    },
+    {
+      "value": 8,
+      "suit": "spade"
+    },
+    {
+      "value": 9,
+      "suit": "spade"
+    },
+    {
+      "value": 10,
+      "suit": "spade"
+    },
+    {
+      "value": 11,
+      "suit": "spade"
+    },
+    {
+      "value": 12,
+      "suit": "spade"
+    },
+    {
+      "value": 13,
+      "suit": "spade"
+    },
+    {
+      "value": 14,
+      "suit": "spade"
+    },
+    {
+      "value": 2,
+      "suit": "clubs"
+    },
+    {
+      "value": 3,
+      "suit": "clubs"
+    },
+    {
+      "value": 4,
+      "suit": "clubs"
+    },
+    {
+      "value": 5,
+      "suit": "clubs"
+    },
+    {
+      "value": 6,
+      "suit": "clubs"
+    },
+    {
+      "value": 7,
+      "suit": "clubs"
+    },
+    {
+      "value": 8,
+      "suit": "clubs"
+    },
+    {
+      "value": 9,
+      "suit": "clubs"
+    },
+    {
+      "value": 10,
+      "suit": "clubs"
+    },
+    {
+      "value": 11,
+      "suit": "clubs"
+    },
+    {
+      "value": 12,
+      "suit": "clubs"
+    },
+    {
+      "value": 13,
+      "suit": "clubs"
+    },
+    {
+      "value": 14,
+      "suit": "clubs"
+    }
+  ],
+  "shuffled": false
+}
