@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import {expect} from 'chai';
 
 describe("A Test Suite", () => {
