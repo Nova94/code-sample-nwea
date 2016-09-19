@@ -10,7 +10,7 @@ var gulp = require('gulp')
 
 var cache = new Cache();
 
-gulp.task('bundle', function () {
+gulp.task('bundle', ['jade', 'css'], function () {
     var stream = gulp.src(['src/**/*.js', 'src/**/*.jsx'])
         .pipe(cache.filter())
         .pipe(webpack(require('./webpack.config')))
@@ -18,6 +18,16 @@ gulp.task('bundle', function () {
         .pipe(gulp.dest('dist/'));
 
     return stream;
+});
+
+gulp.task('css', function() {
+    return gulp.src(['src/**/*.css'])
+        .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('jade', function () {
+    return gulp.src('src/views/*.jade')
+        .pipe(gulp.dest('dist/views/'))
 });
 
 gulp.task('compile', function () {
@@ -44,6 +54,7 @@ function handleError(err) {
     console.log(err.toString());
     this.emit('end');
 }
+
 gulp.task('test', ['compile', 'compileTests'], function () {
     return gulp.src('dist/tests/*.spec.js', {read:false})
         .pipe(mocha({reporter: 'list'}))
@@ -63,17 +74,11 @@ gulp.task('compileServer', function () {
     return stream;
 });
 
-gulp.task('jade', function () {
-    return gulp.src('src/views/*.jade')
-        .pipe(gulp.dest('dist/views/'))
-});
-
-
-gulp.task('watch', ['test'], function () {
+gulp.task('watch', function () {
     var stream = nodemon({
         script: 'dist/server.js',
         watch: ['src', 'tests', 'server.js'],
-        tasks: ['jade', 'bundle', 'compileServer', 'compile', 'test']
+        tasks: ['compile', 'compileServer', 'bundle']
     });
 
     return stream
@@ -84,4 +89,4 @@ gulp.task('wtest', ['test'], function() {
     gulp.watch(['src/**', 'tests/**'], ['test']);
 });
 
-gulp.task('default', ['jade', 'bundle', 'compile', 'compileServer', 'test', 'watch']);
+gulp.task('default', ['test', 'bundle', 'watch']);
