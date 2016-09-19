@@ -2,7 +2,7 @@
 
 Copyright (c) 2016 Lisa Gray
 
-This application was made to play the card game war.
+This application was made to play the card game war as a code sample.
 
 It is unfinished compared to my original vision, ran out of time due to previous commitments.
 

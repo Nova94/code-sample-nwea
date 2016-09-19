@@ -85,26 +85,25 @@ export class Game extends React.Component {
         }
         else if (battle.aiCard.compare(battle.p1Card) > 0) {
             console.log('ai won the battle');
-            battle.ai.draw(battle.p1Card);
-            battle.ai.draw(battle.aiCard);
+            //add cards to ai's hand
+            battle.ai.draw(battle.p1Card); battle.ai.draw(battle.aiCard);
         }
         else {
             console.log('player 1 won the battle');
-            battle.p1.draw(battle.aiCard);
-            battle.p1.draw(battle.p1Card);
+            //add cards to player's hand
+            battle.p1.draw(battle.aiCard); battle.p1.draw(battle.p1Card);
         }
     }
 
     play() {
-        this.setup();
+        this.setup(); //run setup get a new deck and deal to players.
         do {
-
             console.log('----------------');
             this.battle();
 
-        } while (!this.players[0].wins && !this.players[1].wins);
+        } while (!this.players[0].wins && !this.players[1].wins); //While no one has one keep battling.
 
-        this.cleanup();
+        this.cleanup(); //cleanup game and announce winner
 
     }
 

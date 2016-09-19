@@ -3,8 +3,6 @@ import React from 'react';
 import {Component} from 'react';
 import {render} from 'react-dom';
 import {Game} from './Game';
-import {WarCardGamePlayer} from '../models/Player';
-
 
 class App extends Component {
     render() {
