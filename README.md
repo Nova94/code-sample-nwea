@@ -6,6 +6,9 @@ This application was made to play the card game war as a code sample.
 
 It is unfinished compared to my original vision, ran out of time due to previous commitments.
 
+#Known Bug
+ if a war happens and one person runs out of cards it throws an error and stops the game.
+
 Future tasks:
   -break up Game component into multiple components (Player, Field)
   -use spritesheet and canvas to render a deck/hand and each card
