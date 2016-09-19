@@ -1,4 +1,9 @@
 import {SuitedCard} from './Card';
+
+/*
+* Player class
+* desc: this base class models a player with a name and score
+* */
 export class Player {
     constructor(name) {
         this.name = name;
@@ -14,6 +19,12 @@ export class Player {
 
 }
 
+
+/*
+* CardGamePlayer
+* description: this class extends Player for card games by adding a hand and handLimit members
+* along with a method like draw() returns card
+* */
 export class CardGamePlayer extends Player {
     constructor(name, handLimit) {
         super(name);
@@ -26,13 +37,15 @@ export class CardGamePlayer extends Player {
     draw(card) {
         if(this.hand.length < this.handLimit) {
             this.hand.push(card);
-            return null;
         }
-
-        return card;
     }
 }
 
+/*
+* WarCardGamePlayer class
+* desc: this class is overrides playTurn() to remove the top card from their hand as in the card game War
+* also overrides wins/loses to return conditions whether the player has won or lost.
+* */
 
 export class WarCardGamePlayer extends CardGamePlayer {
     constructor(name, handLimit) {

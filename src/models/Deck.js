@@ -1,5 +1,10 @@
 import {shuffle} from 'underscore';
 
+
+/*
+* Deck class
+* desc: implementation of a collection of Cards
+* */
 export class Deck {
     constructor() {
         this._cards = [];
