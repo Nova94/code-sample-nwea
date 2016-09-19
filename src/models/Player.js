@@ -1,4 +1,4 @@
-
+import {SuitedCard} from './Card';
 export class Player {
     constructor(name) {
         this.name = name;
@@ -33,23 +33,25 @@ export class CardGamePlayer extends Player {
     }
 }
 
+
 export class WarCardGamePlayer extends CardGamePlayer {
     constructor(name, handLimit) {
         super(name, handLimit);
     }
 
     playTurn() {
-        console.log(super.playTurn());
-        return this.hand.shift();
+        let card = this.hand.shift();
+        if (card !== undefined) {
+            console.log(super.playTurn() + ': ' + card.value);
+            ;return new SuitedCard(card.value, card.suit) }
+        return null;
     }
 
     get wins() {
-        console.log(super.wins);
         return this.hand.length == this.handLimit
     }
 
     get loses() {
-        console.log(super.loses);
         return this.hand.length == 0
     }
 }

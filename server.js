@@ -7,6 +7,8 @@ import SuitedDeck from '../assets/suited.json';
 const app = express();
 
 app.use('/bundle.js', express.static(__dirname + '/bundle.js')); //set static to include bundle.js
+app.use('/styles.css', express.static(__dirname + '/css/styles.css'));
+app.use('/bootstrap.min.css', express.static(__dirname + '/../node_modules/bootstrap/dist/css/bootstrap.min.css'));
 
 app.use(morgan('dev')); //set morgan logger to dev
 app.set('view engine', 'jade'); //set view engine to jade

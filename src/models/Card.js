@@ -32,7 +32,6 @@ export class SuitedCard extends Card {
     toJSON() {
         return JSON.stringify({value: this.value, suit: this.suit});
     }
-
 }
 
 

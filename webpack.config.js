@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.jsx',
+    entry: ['whatwg-fetch','./src/main.jsx'],
     output: { path: __dirname + '/dist/', filename: 'bundle.js'},
     resolve: {
         extensions: ['', '.js', '.jsx']

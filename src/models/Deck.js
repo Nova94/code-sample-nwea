@@ -36,7 +36,6 @@ export class Deck {
 
     fromJSON(data) {
         Object.assign(this, data);
-        console.log(this)
     }
 }
 

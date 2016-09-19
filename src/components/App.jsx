@@ -2,10 +2,15 @@ import 'babel-polyfill';
 import React from 'react';
 import {Component} from 'react';
 import {render} from 'react-dom';
+import {Game} from './Game';
+import {WarCardGamePlayer} from '../models/Player';
+
 
 class App extends Component {
     render() {
-        return (<h1>Hello World from react!</h1>);
+        return (
+            <Game source="http://localhost:3000/deck/suited/shuffled" />
+        );
     }
 }
 
