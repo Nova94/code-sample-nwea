@@ -10,14 +10,13 @@ var gulp = require('gulp')
 
 var cache = new Cache();
 
-gulp.task('bundle', ['jade', 'css'], function () {
-    var stream = gulp.src(['src/**/*.js', 'src/**/*.jsx'])
+gulp.task('bundle', ['jade', 'css', 'compile', 'compileServer'], function () {
+    return gulp.src(['src/**/*.js', 'src/**/*.jsx'])
         .pipe(cache.filter())
         .pipe(webpack(require('./webpack.config')))
         .pipe(cache.cache())
         .pipe(gulp.dest('dist/'));
 
-    return stream;
 });
 
 gulp.task('css', function() {
@@ -74,11 +73,11 @@ gulp.task('compileServer', function () {
     return stream;
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['bundle'], function () {
     var stream = nodemon({
         script: 'dist/server.js',
         watch: ['src', 'tests', 'server.js'],
-        tasks: ['compile', 'compileServer', 'bundle']
+        tasks: ['bundle']
     });
 
     return stream
